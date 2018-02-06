@@ -4,30 +4,47 @@ body {
   -webkit-background-size: cover;
 }
 main {
-  margin: 200px;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  margin-top:50px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right:100px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background-color: white;
 }
-.button{
-  margin: 25px;
-  padding:10px;
-
-}
-#vraag {
-
-	margin-right: 400px;
-	margin-left: 388px;
-	width: 620px;
-
-  padding:15px 45px;
-  font-size: 18px;
+.extra{
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
   text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  display:inline-block;
+  transition:background-color .2s ease
+}
+.overslaan{
+  color: #A8A8A8;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  display:inline-block;
+  transition:background-color .2s ease
+}
+#statement {
+	width: 620px;
+  font-size: 26px;
   cursor: pointer;
   outline: none;
-
-  border: 4px solid black;
-  border-radius: 15px;
+}
+#title {
+  color: #01B4DC;
 }
