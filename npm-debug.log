@@ -1,0 +1,115 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '--save-dev',
+1 verbose cli   'eslint',
+1 verbose cli   '[eslint-plugins]' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.2
+4 verbose config Skipping project config: C:\Users\alex/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData eslint
+9 silly fetchPackageMetaData [eslint-plugins]
+10 silly fetchNamedPackageData eslint
+11 silly mapToRegistry name eslint
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry data Result {
+14 silly mapToRegistry   raw: 'eslint',
+14 silly mapToRegistry   scope: null,
+14 silly mapToRegistry   escapedName: 'eslint',
+14 silly mapToRegistry   name: 'eslint',
+14 silly mapToRegistry   rawSpec: '',
+14 silly mapToRegistry   spec: 'latest',
+14 silly mapToRegistry   type: 'tag' }
+15 silly mapToRegistry uri https://registry.npmjs.org/eslint
+16 silly fetchOtherPackageData [eslint-plugins]
+17 silly cache add args [ '[eslint-plugins]', null ]
+18 verbose cache add spec [eslint-plugins]
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: '[eslint-plugins]',
+19 silly cache add   scope: null,
+19 silly cache add   escapedName: null,
+19 silly cache add   name: null,
+19 silly cache add   rawSpec: '[eslint-plugins]',
+19 silly cache add   spec: 'C:\\Users\\alex\\Documents\\Jaar 2\\stemwijzer\\[eslint-plugins]',
+19 silly cache add   type: 'local' }
+20 error addLocal Could not install C:\Users\alex\Documents\Jaar 2\stemwijzer\[eslint-plugins]
+21 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\alex\Documents\Jaar 2\stemwijzer\[eslint-plugins]'
+21 silly fetchPackageMetaData     at Error (native)
+21 silly fetchPackageMetaData  error for [eslint-plugins] { Error: ENOENT: no such file or directory, open 'C:\Users\alex\Documents\Jaar 2\stemwijzer\[eslint-plugins]'
+21 silly fetchPackageMetaData     at Error (native)
+21 silly fetchPackageMetaData   errno: -4058,
+21 silly fetchPackageMetaData   code: 'ENOENT',
+21 silly fetchPackageMetaData   syscall: 'open',
+21 silly fetchPackageMetaData   path: 'C:\\Users\\alex\\Documents\\Jaar 2\\stemwijzer\\[eslint-plugins]' }
+22 verbose request uri https://registry.npmjs.org/eslint
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 10:10:07
+25 verbose request id df5989a47f655b47
+26 verbose etag W/"593dec92-727e6"
+27 verbose lastModified Mon, 12 Jun 2017 01:21:22 GMT
+28 http request GET https://registry.npmjs.org/eslint
+29 http 200 https://registry.npmjs.org/eslint
+30 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+30 verbose headers   server: 'UploadServer',
+30 verbose headers   'cache-control': 'max-age=300',
+30 verbose headers   'last-modified': 'Sat, 3 Feb 2018 2:02:32 GMT',
+30 verbose headers   etag: '"5a751838-88b38"',
+30 verbose headers   'x-npm-region': 'EU-Central',
+30 verbose headers   'content-encoding': 'gzip',
+30 verbose headers   'content-length': '34056',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Tue, 06 Feb 2018 09:10:00 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   age: '12545',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-ams4444-AMS',
+30 verbose headers   'x-cache': 'HIT',
+30 verbose headers   'x-cache-hits': '7',
+30 verbose headers   'x-timer': 'S1517908201.538357,VS0,VE0',
+30 verbose headers   vary: 'Accept-Encoding, Accept' }
+31 silly get cb [ 200,
+31 silly get   { 'content-type': 'application/json; charset=UTF-8',
+31 silly get     server: 'UploadServer',
+31 silly get     'cache-control': 'max-age=300',
+31 silly get     'last-modified': 'Sat, 3 Feb 2018 2:02:32 GMT',
+31 silly get     etag: '"5a751838-88b38"',
+31 silly get     'x-npm-region': 'EU-Central',
+31 silly get     'content-encoding': 'gzip',
+31 silly get     'content-length': '34056',
+31 silly get     'accept-ranges': 'bytes',
+31 silly get     date: 'Tue, 06 Feb 2018 09:10:00 GMT',
+31 silly get     via: '1.1 varnish',
+31 silly get     age: '12545',
+31 silly get     connection: 'keep-alive',
+31 silly get     'x-served-by': 'cache-ams4444-AMS',
+31 silly get     'x-cache': 'HIT',
+31 silly get     'x-cache-hits': '7',
+31 silly get     'x-timer': 'S1517908201.538357,VS0,VE0',
+31 silly get     vary: 'Accept-Encoding, Accept' } ]
+32 verbose get saving eslint to C:\Users\alex\AppData\Roaming\npm-cache\registry.npmjs.org\eslint\.cache.json
+33 verbose correctMkdir C:\Users\alex\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+34 silly rollbackFailedOptional Starting
+35 silly rollbackFailedOptional Finishing
+36 silly runTopLevelLifecycles Finishing
+37 silly install printInstalled
+38 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\alex\Documents\Jaar 2\stemwijzer\[eslint-plugins]'
+38 verbose stack     at Error (native)
+39 verbose cwd C:\Users\alex\Documents\Jaar 2\stemwijzer
+40 error Windows_NT 10.0.15063
+41 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "--save-dev" "eslint" "[eslint-plugins]"
+42 error node v6.10.2
+43 error npm  v3.10.10
+44 error path C:\Users\alex\Documents\Jaar 2\stemwijzer\[eslint-plugins]
+45 error code ENOENT
+46 error errno -4058
+47 error syscall open
+48 error enoent ENOENT: no such file or directory, open 'C:\Users\alex\Documents\Jaar 2\stemwijzer\[eslint-plugins]'
+49 error enoent ENOENT: no such file or directory, open 'C:\Users\alex\Documents\Jaar 2\stemwijzer\[eslint-plugins]'
+49 error enoent This is most likely not a problem with npm itself
+49 error enoent and is related to npm not being able to find a file.
+50 verbose exit [ -4058, true ]

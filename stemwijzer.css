@@ -1,0 +1,18 @@
+body {
+  background-image:url('img/tweede_kamer_0.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+}
+main {
+  margin: 200px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: white;
+}
+.button{
+  margin: 25px;
+  padding:10px;
+
+}
