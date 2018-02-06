@@ -16,3 +16,18 @@ main {
   padding:10px;
 
 }
+#vraag {
+
+	margin-right: 400px;
+	margin-left: 388px;
+	width: 620px;
+
+  padding:15px 45px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  border: 4px solid black;
+  border-radius: 15px;
+}

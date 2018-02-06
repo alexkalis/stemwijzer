@@ -118,7 +118,6 @@ var parties = [
 	{name: "Artikel 1", secular: true, size: 0},
 	{name: "Libertarische Partij", secular: true, size: 0}
 ];
-// for (i = 0; i < 5; i++ ) {
-// 	console.log(subjects[i].title)
-// }
-console.log(subjects[0].title);
+ for (i = 0; i < 3; i++ ) {
+ 	console.log(subjects[i].title)
+ }
