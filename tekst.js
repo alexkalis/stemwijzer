@@ -118,11 +118,27 @@ var parties = [
 	{name: "Artikel 1", secular: true, size: 0},
 	{name: "Libertarische Partij", secular: true, size: 0}
 ];
-
+var nr = 0;
+function add_eens(){
+nr++
+document.getElementById('title').innerHTML=subjects[i].title;
+document.getElementById('statement').innerHTML=subjects[i].statement;
+}
 
  for (i = 0; i < 3; i++ ) {
  	console.log(subjects[i].title);
-	 console.log(subjects[i].statement);
- }
-document.getElementById('title').innerHTML=subjects[0].title;
-document.getElementById('statement').innerHTML=subjects[0].statement;
+	console.log(subjects[i].statement);
+
+document.getElementById('title').innerHTML=subjects[i].title;
+document.getElementById('statement').innerHTML=subjects[i].statement;
+}
+
+add_eens();
+// for (i = 0; i < 3; i++) {
+// 	document.getElementById('statement').onClick = click(i)
+// }
+// function click(i) {
+// return function() {
+// 	document.getElementById('statement').innerHTML=subjects[i].statement;
+// }
+// }
