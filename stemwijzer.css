@@ -39,6 +39,7 @@ main {
   display:inline-block;
   transition:background-color .2s ease
 }
+
 #statement {
 	width: 620px;
   font-size: 26px;
