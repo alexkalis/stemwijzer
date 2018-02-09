@@ -121,9 +121,14 @@ var prev = function(event){
 var resultaat = function(event) {
   resultaat = '';
   title.innerHTML = 'Resultaat:';
-  keysSorted = Object.values(results).sort(function(a,b){return results[a]-results[b]})
-  console.log(keysSorted)
+
+  function compare(a,b) {
+    return b.pt - a.pt;
+  }
+
   showResults();
+  keysSorted = results.sort(compare);
+  console.log(keysSorted)
   for (i = 0; i < 20; i++) {
     resultaat += results[i].name + ': ' + results[i].pt + '</br>';
   }
