@@ -29,34 +29,15 @@
 //   return subjects[i].parties;
 // }
 // }
-var vvd = 0;
-var cda = 0;
-var pvv = 0;
-var d66 = 0;
-var groenlinks = 0;
-var sp = 0;
-var pvda = 0;
-var christenUnie = 0;
-var dieren = 0;
-var sgp = 0;
-var denk = 0;
-var forum = 0;
-var lokaal = 0;
-var ondernemersPartij = 0;
-var vnl = 0;
-var nieuwe =0;
-var burger = 0;
-var piraten = 0;
-var artikel = 0;
-var libertarische = 0;
 
 
 
 
 
-
+var pt = 0;
  var nr = 0;
 var choices = [];
+
 
 var title = document.getElementById('title');
 var statement = document.getElementById('statement');
@@ -74,31 +55,57 @@ statement.innerHTML = subjects[nr].statement;
 // statement.innerHTML = subjects[nr].title;
 
 
+
+var resultaat = function(event) {
+  resultaat = '';
+  title.innerHTML = 'Resultaat:';
+
+  for (i = 0; i < 20; i++) {
+    resultaat += results[i].name + ' ' + results[i].pt + '</br>';
+  }
+  statement.innerHTML = resultaat;
+
+}
+
 var geenWaar = function(event) {
+  // saveChoice('ambivalent');
 	nr++
 	choices.push('ambivalent');
 	title.innerHTML = subjects[nr].title;
 	statement.innerHTML = subjects[nr].statement;
 	console.log(choices);
   console.log(nr);
+
+  if (nr == 7) {
+    result
+  }
+
 }
 var waar  = function(event) {
-saveChoice('pro')
+// saveChoice('pro');
 
 	nr++
-	choices.push('pro')
+	choices.push('pro');
 	title.innerHTML = subjects[nr].title;
 	statement.innerHTML = subjects[nr].statement;
 	console.log(choices);
   console.log(nr);
+  if (nr == 7) {
+    result
+  }
+
 }
 var nietWaar = function(event) {
+  // saveChoice('contra');
 	nr++
 	choices.push('contra');
 	title.innerHTML = subjects[nr].title;
 	statement.innerHTML = subjects[nr].statement;
 	console.log(choices);
   console.log(nr);
+  if (nr == 7) {
+    result
+  }
 }
 
 
@@ -126,15 +133,15 @@ terug.onclick = prev;
 eens.onclick = waar;
 geen.onclick = geenWaar;
 oneens.onclick = nietWaar;
+resultaat1.onclick = resultaat;
 
-var nr = Math.min(Math.max(parseInt(nr), 0), 20);
 console.log(nr);
 
 
 var position = subjects[1].parties[1].position;
 console.log(position);
 
-var party = [
+var results = [
   {
     name: 'VVD',
     pt: 0
@@ -217,7 +224,7 @@ var party = [
   }
 ]
 
-
+//
 // function saveChoice(choice) {
 //   loop door de parties heen van uit de huidige subject
 // for(var i = 0; i < 20; i ) {
@@ -229,6 +236,38 @@ var party = [
 // }
 //
 // }
-subjects[nr].parties.forEach(function(element) {
-  console.log(element.position);
-});
+
+// function saveChoice(choice) {
+//   subjects[nr].parties.forEach(function(element) {
+//     if (choice === position) {
+//       console.log(element.position);
+//       party++;
+//     }
+//   });
+// }
+function showResults() {
+
+	choices.forEach(function(choice, index) {
+
+		console.log(subjects[index]);
+
+		subjects[index].parties.forEach(function(party, index) {
+
+			results.forEach(function(result) {
+
+				if (party.name == result.name) {
+					console.log(party);
+					console.log(party.position);
+
+					if (party.position == choice) {
+						console.log(party.position);
+						console.log(choice);
+						result.pt++;
+					}
+				}
+			});
+		});
+	});
+
+	console.log(results);
+}
