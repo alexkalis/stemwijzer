@@ -59,11 +59,19 @@ statement.innerHTML = subjects[nr].statement;
 var resultaat = function(event) {
   resultaat = '';
   title.innerHTML = 'Resultaat:';
+  showResults();
+  Math.max.apply(Math,results.pt);
 
   for (i = 0; i < 20; i++) {
-    resultaat += results[i].name + ' ' + results[i].pt + '</br>';
+    resultaat += results[i].name + ': ' + results[i].pt + '</br>';
   }
   statement.innerHTML = resultaat;
+  document.getElementById('eens').style.visibility = 'hidden';
+  document.getElementById('geen').style.visibility = 'hidden';
+  document.getElementById('oneens').style.visibility = 'hidden';
+  document.getElementById('overslaan').style.visibility = 'hidden';
+  document.getElementById('terug').style.visibility = 'hidden';
+  document.getElementById('resultaat1').style.visibility = 'hidden';
 
 }
 
