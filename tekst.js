@@ -56,24 +56,7 @@ statement.innerHTML = subjects[nr].statement;
 
 
 
-var resultaat = function(event) {
-  resultaat = '';
-  title.innerHTML = 'Resultaat:';
-  showResults();
-  Math.max.apply(Math,results.pt);
 
-  for (i = 0; i < 20; i++) {
-    resultaat += results[i].name + ': ' + results[i].pt + '</br>';
-  }
-  statement.innerHTML = resultaat;
-  document.getElementById('eens').style.visibility = 'hidden';
-  document.getElementById('geen').style.visibility = 'hidden';
-  document.getElementById('oneens').style.visibility = 'hidden';
-  document.getElementById('overslaan').style.visibility = 'hidden';
-  document.getElementById('terug').style.visibility = 'hidden';
-  document.getElementById('resultaat1').style.visibility = 'hidden';
-
-}
 
 var geenWaar = function(event) {
   // saveChoice('ambivalent');
@@ -85,7 +68,7 @@ var geenWaar = function(event) {
   console.log(nr);
 
   if (nr == 7) {
-    result
+    resultaat();
   }
 
 }
@@ -99,9 +82,8 @@ var waar  = function(event) {
 	console.log(choices);
   console.log(nr);
   if (nr == 7) {
-    result
+    resultaat();
   }
-
 }
 var nietWaar = function(event) {
   // saveChoice('contra');
@@ -112,7 +94,7 @@ var nietWaar = function(event) {
 	console.log(choices);
   console.log(nr);
   if (nr == 7) {
-    result
+    resultaat();
   }
 }
 
@@ -122,8 +104,8 @@ var next = function(event){
 	title.innerHTML = subjects[nr].title;
 	statement.innerHTML = subjects[nr].statement;
   console.log(nr);
-  if (nr == 7  ) {
-
+  if (nr == 7) {
+    resultaat();
   }
 }
 
@@ -136,6 +118,23 @@ var prev = function(event){
   console.log(nr);
 }
 
+var resultaat = function(event) {
+  resultaat = '';
+  title.innerHTML = 'Resultaat:';
+  keysSorted = Object.values(results).sort(function(a,b){return results[a]-results[b]})
+  console.log(keysSorted)
+  showResults();
+  for (i = 0; i < 20; i++) {
+    resultaat += results[i].name + ': ' + results[i].pt + '</br>';
+  }
+  statement.innerHTML = resultaat;
+  document.getElementById('eens').style.visibility = 'hidden';
+  document.getElementById('geen').style.visibility = 'hidden';
+  document.getElementById('oneens').style.visibility = 'hidden';
+  document.getElementById('overslaan').style.visibility = 'hidden';
+  document.getElementById('terug').style.visibility = 'hidden';
+  document.getElementById('resultaat1').style.visibility = 'hidden';
+}
 overslaan.onclick = next;
 terug.onclick = prev;
 eens.onclick = waar;
