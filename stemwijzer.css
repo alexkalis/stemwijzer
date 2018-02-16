@@ -3,6 +3,9 @@ body {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
 }
+form{
+  visibility: hidden;
+}
 main {
   margin-top:50px;
   margin-bottom: 100px;
